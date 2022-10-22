@@ -1,28 +1,28 @@
 //
 //  AppDelegate.swift
-//  Pastagram
+//  Instagram
 //
 //  Created by Akil Bhuiyan on 10/9/22.
 //
 
 import UIKit
 import Parse
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+var window: UIWindow?
 
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
-    {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
-        let parseConfig = ParseClientConfiguration
-        {
-                    $0.applicationId = "smbmmHwgjmiHdMAOHzD3PYBAgId3gM3c9lE6Bjy4"
-                    $0.clientKey = "QEcyfobmqXAGsLAsjsfQ6nZ8XEGxSMx9KQUyEExi"
-                    $0.server = "https://parseapi.back4app.com"
-        }
-        Parse.initialize(with: parseConfig)
-            
+        let parseConfig = ParseClientConfiguration {
+            $0.applicationId = "smbmmHwgjmiHdMAOHzD3PYBAgId3gM3c9lE6Bjy4"
+            $0.clientKey = "QEcyfobmqXAGsLAsjsfQ6nZ8XEGxSMx9KQUyEExi"
+            $0.server = "https://parseapi.back4app.com"
+            }
+            Parse.initialize(with: parseConfig)
+
         
         return true
     }
